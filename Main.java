@@ -344,7 +344,7 @@ public class Main {
         Scanner input = new Scanner(System.in);
 
         int resp;
-        
+
         System.out.println("\nDeseja acessar o relatório? --> 1");
         System.out.println("\nDeseja sair? --> 2");
         resp = input.nextInt();
@@ -437,7 +437,7 @@ public class Main {
                 while(out == 1){
                     switch(i){
                         case 1:
-                            System.out.println("- Lápis: "+ escolar.getLapis());
+                            System.out.println(" - Lápis: "+ escolar.getLapis());
                             break;
                         case 2:
                             System.out.println("- Caderno: "+ escolar.getCaderno());
