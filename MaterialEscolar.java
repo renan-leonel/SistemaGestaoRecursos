@@ -1,9 +1,9 @@
 package trab1;
 
 public class MaterialEscolar extends RecursosMateriais{
-    public int lapis = 0;
-    public int caderno = 0;
-    public int caneta = 0;
+    private int lapis = 0;
+    private int caderno = 0;
+    private int caneta = 0;
 
     public int getLapis() {
         return this.lapis;

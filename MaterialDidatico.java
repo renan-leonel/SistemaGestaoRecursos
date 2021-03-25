@@ -1,12 +1,12 @@
 package trab1;
 
 public class MaterialDidatico extends RecursosMateriais{
-    public int livros = 0;
-    public int quadroNegro = 0;
-    public int quadroBranco = 0;
-    public int giz = 0;
-    public int apagador = 0;
-    public int pincel = 0;
+    private int livros = 0;
+    private int quadroNegro = 0;
+    private int quadroBranco = 0;
+    private int giz = 0;
+    private int apagador = 0;
+    private int pincel = 0;
 
     public int getLivros() {
         return this.livros;

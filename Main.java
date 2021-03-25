@@ -2,14 +2,11 @@ package trab1;
 import java.util.Scanner;
 
 public class Main {
-    public static void cadastrar(){
-        MaterialDidatico didatico = new MaterialDidatico();
-        MaterialEscolar escolar = new MaterialEscolar();
-        MaterialLimpeza limpeza = new MaterialLimpeza();
+    public static void cadastrar(MaterialDidatico didatico, MaterialEscolar escolar, MaterialLimpeza limpeza){
         Scanner input = new Scanner(System.in);
 
-        System.out.println("Opção de cadastro selecionada: ");
-        System.out.println("Digite a quantidade inicial de cada item: ");
+        System.out.println("\nOpção de cadastro selecionada: ");
+        System.out.println("\nDigite a quantidade inicial de cada item: ");
 
         System.out.println("------- Material didático -------");
 
@@ -72,23 +69,23 @@ public class Main {
         limpeza.setSabaoBarra(sabaoBarra);
     }
 
-    public static void atualizar(){
+    public static void atualizar(MaterialDidatico didatico, MaterialEscolar escolar, MaterialLimpeza limpeza){
         Scanner input = new Scanner(System.in);
 
-        System.out.println("Selecione o tipo de material que deseja atualizar");
-        System.out.println("1 - Material didático\n 2 - Material escolar\n 3 - Material de limpeza");
+        System.out.println("\nSelecione o tipo de material que deseja atualizar");
+        System.out.println("\n 1 - Material didático\n 2 - Material escolar\n 3 - Material de limpeza");
 
-        int y;
-        y = input.nextInt();
-        switch(y){
+        int w;
+        w = input.nextInt();
+        switch(w){
             case 1:
-                attMatDid();
+                attMatDid(didatico);
                 break;
             case 2:
-                attMatEsc();
+                attMatEsc(escolar);
                 break;
             case 3:
-                attMatLimp();
+                attMatLimp(limpeza);
                 break;
             default:
                 System.out.println("erro");
@@ -96,12 +93,11 @@ public class Main {
     }
 
     //função que atualiza os recursos materiais
-    public static void attMatDid(){
+    public static void attMatDid(MaterialDidatico didatico){
         Scanner input = new Scanner(System.in);
-        MaterialDidatico didatico = new MaterialDidatico();
 
-        System.out.println("Selecione um atributo para atualizar: ");
-        System.out.println("1 - Livros\n 2 - Quadro negro\n 3 - Quadro branco\n 4 - Giz\n 5 - Apagador\n 6 - Pincel");
+        System.out.println("\nSelecione um atributo para atualizar: ");
+        System.out.println("\n 1 - Livros\n 2 - Quadro negro\n 3 - Quadro branco\n 4 - Giz\n 5 - Apagador\n 6 - Pincel");
 
         int z;
         int sair = 1;
@@ -137,19 +133,18 @@ public class Main {
                     System.out.println("erro");
             }
 
-            System.out.println("Deseja alterar outro atributo? --> 1");
-            System.out.println("Deseja sair? --> 2");
+            System.out.println("\nDeseja alterar outro atributo? --> 1");
+            System.out.println("\nDeseja sair? --> 2");
             sair = input.nextInt();
         }
     }
 
     //função que atualiza os recursos escolares
-    public static void attMatEsc(){
+    public static void attMatEsc(MaterialEscolar escolar){
         Scanner input = new Scanner(System.in);
-        MaterialEscolar escolar = new MaterialEscolar();
 
-        System.out.println("Selecione um atributo para atualizar: ");
-        System.out.println("1 - Lápis\n 2 - Caderno\n 3 - Caneta");
+        System.out.println("\nSelecione um atributo para atualizar: ");
+        System.out.println("\n 1 - Lápis\n 2 - Caderno\n 3 - Caneta");
 
         int z;
         int sair = 1;
@@ -173,19 +168,18 @@ public class Main {
                     System.out.println("erro");
             }
 
-            System.out.println("Deseja alterar outro atributo? --> 1");
-            System.out.println("Deseja sair? --> 2");
+            System.out.println("\nDeseja alterar outro atributo? --> 1");
+            System.out.println("\nDeseja sair? --> 2");
             sair = input.nextInt();
         }
     }
 
     //função que atualiza os recursos de limpeza
-    public static void attMatLimp(){
+    public static void attMatLimp(MaterialLimpeza limpeza){
         Scanner input = new Scanner(System.in);
-        MaterialLimpeza limpeza = new MaterialLimpeza();
 
-        System.out.println("Selecione um atributo para atualizar: ");
-        System.out.println("1 - Alvejante\n 2 - Sabão em pó\n 3 - Água sanitária\n 4 - Sabão em barra");
+        System.out.println("\nSelecione um atributo para atualizar: ");
+        System.out.println("\n 1 - Alvejante\n 2 - Sabão em pó\n 3 - Água sanitária\n 4 - Sabão em barra");
 
         int z;
         int sair = 1;
@@ -213,59 +207,150 @@ public class Main {
                     System.out.println("erro");
             }
 
-            System.out.println("Deseja alterar outro atributo? --> 1");
-            System.out.println("Deseja sair? --> 2");
+            System.out.println("\nDeseja alterar outro atributo? --> 1");
+            System.out.println("\nDeseja sair? --> 2");
             sair = input.nextInt();
         }
     }
     
-    public static void remover(){
+    public static void remover(MaterialDidatico didatico, MaterialEscolar escolar, MaterialLimpeza limpeza){
         Scanner input = new Scanner(System.in);
 
-        System.out.println("Selecione o tipo de material que deseja remover");
-        System.out.println("1 - Material didático\n 2 - Material escolar\n 3 - Material de limpeza");
+        System.out.println("\nSelecione o tipo de material que deseja remover");
+        System.out.println("\n 1 - Material didático\n2 - Material escolar\n3 - Material de limpeza");
 
         int y;
         y = input.nextInt();
         switch(y){
             case 1:
-                removeMatDid();
+                removeMatDid(didatico);
                 break;
             case 2:
-                removeMatEsc();
+                removeMatEsc(escolar);
                 break;
             case 3:
-                removeMatLimp();
+                removeMatLimp(limpeza);
                 break;
             default:
                 System.out.println("erro");
         }
     }
 
-    public static void removeMatDid(){
+    public static void removeMatDid(MaterialDidatico didatico){
+        Scanner input = new Scanner(System.in);
 
+        System.out.println("\nSelecione um atributo para remover: ");
+        System.out.println("\n 1 - Livros\n2 - Quadro negro\n3 - Quadro branco\n4 - Giz\n5 - Apagador\n6 - Pincel");
+
+        int z;
+        int sair = 1;
+        z = input.nextInt();
+
+        while(sair == 1){
+            switch(z){
+                case 1:
+                    didatico.setLivros(0);
+                    break;
+                case 2:
+                    didatico.setLivros(0);
+                    break;
+                case 3:
+                    didatico.setLivros(0);
+                    break;
+                case 4:
+                    didatico.setLivros(0);
+                    break;
+                case 5:
+                    didatico.setLivros(0);
+                    break;
+                case 6:
+                    didatico.setLivros(0);
+                    break;
+                default:
+                    System.out.println("erro");
+            }
+
+            System.out.println("\nDeseja remover outro atributo? --> 1");
+            System.out.println("\nDeseja sair? --> 2");
+            sair = input.nextInt();
+        }
+    }
+    public static void removeMatEsc(MaterialEscolar escolar){
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("\nSelecione um atributo para remover: ");
+        System.out.println("\n 1 - Lápis\n 2 - Caderno\n 3 - Caneta");
+
+        int z;
+        int sair = 1;
+        z = input.nextInt();
+
+        while(sair == 1){
+            switch(z){
+                case 1:
+                    escolar.setLapis(0);
+                    break;
+                case 2:
+                    escolar.setCaderno(0);
+                    break;
+                case 3:
+                    escolar.setCaneta(0);
+                    break;
+                default:
+                    System.out.println("erro");
+            }
+
+            System.out.println("\nDeseja remover outro atributo? --> 1");
+            System.out.println("\nDeseja sair? --> 2");
+            sair = input.nextInt();
+        }
     }
 
-    public static void removeMatEsc(){
-        
-    }
+    public static void removeMatLimp(MaterialLimpeza limpeza){
+        Scanner input = new Scanner(System.in);
 
-    public static void removeMatLimp(){
-        
+        System.out.println("\nSelecione um atributo para remover: ");
+        System.out.println("\n 1 - Alvejante\n 2 - Sabão em pó\n 3 - Água sanitária\n 4 - Sabão em barra");
+
+        int z;
+        int sair = 1;
+        z = input.nextInt();
+
+        while(sair == 1){
+            switch(z){
+                case 1:
+                    limpeza.setAlvejante(0);
+                    break;
+                case 2:
+                    limpeza.setSabaoPo(0);
+                    break;
+                case 3:
+                    limpeza.setAguaSanitaria(0);
+                    break;
+                case 4:
+                    limpeza.setSabaoBarra(0);
+                    break;
+                default:
+                    System.out.println("erro");
+            }
+
+            System.out.println("\nDeseja alterar outro atributo? --> 1");
+            System.out.println("\nDeseja sair? --> 2");
+            sair = input.nextInt();
+        }
     }
     
-    public static void gerarRelatorio(){
+    public static void gerarRelatorio(MaterialDidatico didatico, MaterialEscolar escolar, MaterialLimpeza limpeza){
         Scanner input = new Scanner(System.in);
-        MaterialDidatico didatico = new MaterialDidatico();
-        MaterialEscolar escolar = new MaterialEscolar();
-        MaterialLimpeza limpeza = new MaterialLimpeza();
 
         int resp;
-        System.out.println("Deseja acessar o relatório?");
+        
+        System.out.println("\nDeseja acessar o relatório? --> 1");
+        System.out.println("\nDeseja sair? --> 2");
         resp = input.nextInt();
 
         if(resp == 1){
-            System.out.println("Relatório de recursos materiais:");
+            System.out.println("\nRelatório de recursos materiais:");
 
             System.out.println("Material didático:");
             System.out.println("- Apagador: "+ didatico.getApagador());
@@ -292,15 +377,126 @@ public class Main {
 
         }
         else{
-            System.out.println("Sem relatório");
+            System.out.println("\nSem relatório");
         }
     }
 
-    public static void buscarDados(){
+    public static void buscarDados(MaterialDidatico didatico, MaterialEscolar escolar, MaterialLimpeza limpeza){
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("\nSelecione o recurso que deseja buscar: ");
+        System.out.println("\n 1 - Material didático\n2 - Material escolar\n3 - Material de limpeza");
+
+        int k;
+        int i;
+        int sair = 1;
+        int out = 1;
+        k = input.nextInt();
+
+        while(sair == 1){
+            if(k == 1){
+                System.out.println("\nSelecione o atributo que deseja consultar: ");
+                System.out.println("\n 1 - Livros\n 2 - Quadro negro\n 3 - Quadro branco\n 4 - Giz\n 5 - Apagador\n 6 - Pincel");
+                i = input.nextInt();
+
+                while(out == 1){
+                    switch(i){
+                        case 1:
+                            System.out.println("- Livros: "+ didatico.getLivros());
+                            break;
+                        case 2:
+                            System.out.println("- Quadro negro: "+ didatico.getQuadroNegro());
+                            break;
+                        case 3:
+                            System.out.println("- Quadro Branco: "+ didatico.getQuadroBranco());
+                            break;
+                        case 4:
+                            System.out.println("- Giz: "+ didatico.getGiz());
+                            break;
+                        case 5:
+                            System.out.println("- Apagador: "+ didatico.getApagador());
+                            break;
+                        case 6:
+                            System.out.println("- Pincel: "+ didatico.getPincel());
+                            break;
+                        default:
+                            System.out.println("erro");
+                   }
+
+                   System.out.println("\nDeseja alterar outro atributo? --> 1");
+                   System.out.println("\nDeseja sair? --> 2");
+                   out = input.nextInt();
+                }   
+            }
+
+            else if(k == 2){
+                System.out.println("\nSelecione o atributo que deseja consultar: ");
+                System.out.println("\n 1 - Lápis\n 2 - Caderno\n 3 - Caneta");
+                i = input.nextInt();
+
+                while(out == 1){
+                    switch(i){
+                        case 1:
+                            System.out.println("- Lápis: "+ escolar.getLapis());
+                            break;
+                        case 2:
+                            System.out.println("- Caderno: "+ escolar.getCaderno());
+                            break;
+                        case 3:
+                            System.out.println("- Caneta: "+ escolar.getCaneta());
+                            break;
+                        default:
+                            System.out.println("erro");
+                   }
+                   
+                   System.out.println("\nDeseja alterar outro atributo? --> 1");
+                   System.out.println("\nDeseja sair? --> 2");
+                   out = input.nextInt();
+                }   
+            }
+
+            else if(k == 3){
+                System.out.println("\nSelecione o atributo que deseja consultar: ");
+                System.out.println("\n 1 - Alvejante\n 2 - Sabão em pó\n 3 - Água sanitária\n 4 - Sabão em barra");
+                i = input.nextInt();
+
+                while(out == 1){
+                    switch(i){
+                        case 1:
+                            System.out.println("- Alvejante: "+ limpeza.getAlvejante());
+                            break;
+                        case 2:
+                            System.out.println("- Sabão em pó: "+ limpeza.getSabaoPo());
+                            break;
+                        case 3:
+                            System.out.println("- Água sanitária: "+ limpeza.getAguaSanitaria());
+                            break;
+                        case 4:
+                            System.out.println("- Sabão em barra: "+ limpeza.getSabaoBarra());
+                            break;
+                        default:
+                            System.out.println("erro");
+                   }
+
+                   System.out.println("\nDeseja alterar outro atributo? --> 1");
+                   System.out.println("\nDeseja sair? --> 2");
+                   out = input.nextInt();
+                }   
+            }
+
+            else{
+                System.out.println("erro");
+            }
+
+            sair = input.nextInt();
+        }
         
     }
 
     public static void main(String[] args) {
+        MaterialDidatico didatico = new MaterialDidatico();
+        MaterialEscolar escolar = new MaterialEscolar();
+        MaterialLimpeza limpeza = new MaterialLimpeza();
 
         Scanner input = new Scanner(System.in);
 
@@ -319,19 +515,19 @@ public class Main {
 
             switch(x){
                 case 1:
-                    cadastrar();
+                    cadastrar(didatico, escolar, limpeza);
                     break;
                 case 2:
-                    atualizar();
+                    atualizar(didatico, escolar, limpeza);
                     break;
                 case 3:
-                    remover();
+                    remover(didatico, escolar, limpeza);
                     break;
                 case 4:
-                    gerarRelatorio();
+                    gerarRelatorio(didatico, escolar, limpeza);
                     break;
                 case 5:
-                    buscarDados();
+                    buscarDados(didatico, escolar, limpeza);
                     break;
                 case 6:
                     System.out.println("Encerrando programa...");

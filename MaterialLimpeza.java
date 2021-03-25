@@ -1,10 +1,10 @@
 package trab1;
 
 public class MaterialLimpeza extends RecursosMateriais{
-    public int alvejante = 0;
-    public int sabaoPo = 0;
-    public int aguaSanitaria = 0;
-    public int sabaoBarra = 0;
+    private int alvejante = 0;
+    private int sabaoPo = 0;
+    private int aguaSanitaria = 0;
+    private int sabaoBarra = 0;
 
     public int getAlvejante() {
         return this.alvejante;
