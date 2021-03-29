@@ -1,4 +1,4 @@
-package trab1;
+package trab1.recursos;
 
 public class RecursosMateriais {
     

@@ -1,4 +1,6 @@
-package trab1;
+package trab1.material;
+
+import trab1.recursos.RecursosMateriais;
 
 public class MaterialEscolar extends RecursosMateriais{
     private int lapis = 0;
