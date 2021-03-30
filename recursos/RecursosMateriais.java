@@ -53,19 +53,19 @@ public class RecursosMateriais {
 
         System.out.println("------- Material de limpeza -------");
 
-        System.out.println("alvejante: ");
+        System.out.println("Alvejante: ");
         int alvejante = input.nextInt();
         limpeza.setAlvejante(alvejante);
 
-        System.out.println("sabaoPo: ");
+        System.out.println("Sabão em pó: ");
         int sabaoPo = input.nextInt();
         limpeza.setSabaoPo(sabaoPo);
 
-        System.out.println("aguaSanitaria: ");
+        System.out.println("Água sanitaria: ");
         int aguaSanitaria = input.nextInt();
         limpeza.setAguaSanitaria(aguaSanitaria);
 
-        System.out.println("sabaoBarra: ");
+        System.out.println("Sabão em barra: ");
         int sabaoBarra = input.nextInt();
         limpeza.setSabaoBarra(sabaoBarra);
     }
