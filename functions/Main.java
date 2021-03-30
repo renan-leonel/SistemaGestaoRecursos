@@ -1,9 +1,8 @@
-package trab1.functions;
+package functions;
 
 import java.util.Scanner;
-import trab1.material.*;
-import trab1.pessoas.*;
-import trab1.recursos.*;
+import material.*;
+import recursos.*;
 
 public class Main {
     public static void cadastrar(MaterialDidatico didatico, MaterialEscolar escolar, MaterialLimpeza limpeza) {
@@ -497,47 +496,100 @@ public class Main {
 
     }
 
+    public static void operarPessoas(RecursosHumanos recursos){
+        //String name, cpf, turma, curso;
+            // switch(x){
+            //     case 7:
+            //         Scanner entrada = new Scanner(System.in);
+            //         System.out.println("Nome do aluno: ");
+            //         name = entrada.nextLine();
+            //         System.out.println("CPF do aluno: ");
+            //         cpf = entrada.nextLine();
+            //         System.out.println("Turma do aluno: ");
+            //         turma = entrada.nextLine();
+            //         System.out.println("Curso do aluno: ");
+            //         curso = entrada.nextLine();
+
+            //         recursos.insereAluno(name, cpf, turma, curso);
+            //         break;
+
+            //     case 8:
+            //         Scanner entered = new Scanner(System.in);
+            //         System.out.println("Nome do aluno: ");
+            //         name = entered.nextLine();
+            //         recursos.consultaAluno(name);
+            //         break;
+            //     case 9:
+            //          recursos.listAlunos();
+            //         break;
+            //     case 10:
+            //         Scanner digitado = new Scanner(System.in);
+            //         System.out.println("Nome do aluno: ");
+            //         name = digitado.nextLine();
+            //         System.out.println("CPF do aluno: ");
+            //         cpf = digitado.nextLine();
+            //         System.out.println("Turma do aluno: ");
+            //         turma = digitado.nextLine();
+            //         System.out.println("Curso do aluno: ");
+            //         curso = digitado.nextLine();
+            //         recursos.atualizaAluno(name, cpf, turma, curso);
+            //         break;
+            //     default:
+            //         System.out.println("erro");
+            //
+            // }
+    }
+
+    public static void operarMateriais(){
+
+    }
+
     public static void main(String[] args) {
         MaterialDidatico didatico = new MaterialDidatico();
         MaterialEscolar escolar = new MaterialEscolar();
         MaterialLimpeza limpeza = new MaterialLimpeza();
+        RecursosHumanos people = new RecursosHumanos();
 
         Scanner input = new Scanner(System.in);
 
         int x = 0;
 
-        while (x != 6) {
+        while (x != 7) {
             System.out.println("Selecione a ação desejada: ");
             System.out.println("1 -> Cadastrar: ");
             System.out.println("2 -> Atualizar: ");
             System.out.println("3 -> Remover: ");
             System.out.println("4 -> Gerar relatório: ");
             System.out.println("5 -> Buscar dados: ");
-            System.err.println("6 -> Sair: ");
-
+            System.err.println("6 -> Operar Pessoas: ");
+            System.err.println("7 -> Sair: ");
             x = input.nextInt();
 
             switch (x) {
-            case 1:
-                cadastrar(didatico, escolar, limpeza);
-                break;
-            case 2:
-                atualizar(didatico, escolar, limpeza);
-                break;
-            case 3:
-                remover(didatico, escolar, limpeza);
-                break;
-            case 4:
-                gerarRelatorio(didatico, escolar, limpeza);
-                break;
-            case 5:
-                buscarDados(didatico, escolar, limpeza);
-                break;
-            case 6:
-                System.out.println("Encerrando programa...");
-                break;
-            default:
-                System.out.println("erro");
+                case 1:
+                    cadastrar(didatico, escolar, limpeza);
+                    break;
+                case 2:
+                    atualizar(didatico, escolar, limpeza);
+                    break;
+                case 3:
+                    remover(didatico, escolar, limpeza);
+                    break;
+                case 4:
+                    gerarRelatorio(didatico, escolar, limpeza);
+                    break;
+                case 5:
+                    buscarDados(didatico, escolar, limpeza);
+                    break;
+                case 6:
+                    operarPessoas(people);
+                    break;
+
+                case 7:
+                    System.out.println("Encerrando programa...");
+                    break;
+                default:
+                    System.out.println("erro");
             }
         }
     }

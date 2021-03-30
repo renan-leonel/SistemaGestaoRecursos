@@ -1,6 +1,6 @@
-package trab1.material;
+package material;
 
-import trab1.recursos.RecursosMateriais;
+import recursos.RecursosMateriais;
 
 public class MaterialLimpeza extends RecursosMateriais{
     private int alvejante = 0;
