@@ -1,6 +1,8 @@
 package trab1.recursos;
 
 import java.util.ArrayList;
+import java.util.Scanner;
+
 import trab1.pessoas.*;
 
 public class RecursosHumanos {
@@ -11,6 +13,156 @@ public class RecursosHumanos {
     private static ArrayList<Professores> professores = new ArrayList<>();
     private static ArrayList<Serventes> serventes = new ArrayList<>();
 
+    public static void insere(){
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("\nSelecione a pessoa que deseja inserir");
+        System.out.println("\n 1 - Aluno\n 2 - Cozinheiro\n 3 - Instrutor\n 4 - Monitor\n 5 - Professor\n 6 - Servente");
+        int x = input.nextInt();
+
+        switch(x){
+            case 1:
+                insereAluno(name, cpf, turma, curso); // passar so o name e cpf, pegar turma e curso la na funcao por parametro e tirar os parametros daqui e de la
+                break;
+            case 2:
+                insereCozinheiro(name, cpf, salario);
+                break;
+            case 3:
+                insereInstrutor(name, cpf, salario, graduacao);
+                break;
+            case 4:
+                insereMonitor(name, cpf, salario);
+                break;
+            case 5:
+                insereProfessor(name, cpf, salario, graduacao);
+                break;
+            case 6:
+                insereServente(name, cpf, salario, graduacao);
+                break;
+            default:
+        }
+    }
+
+    public static void consulta(){
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("\nSelecione a pessoa que deseja consultar");
+        System.out.println("\n 1 - Aluno\n 2 - Cozinheiro\n 3 - Instrutor\n 4 - Monitor\n 5 - Professor\n 6 - Servente");
+        int x = input.nextInt();
+
+        switch(x){
+            case 1:
+                consultaAluno(name);
+                break;
+            case 2:
+                consultaCozinheiro(name);
+                break;
+            case 3:
+                consultaInstrutor(name);
+                break;
+            case 4:
+                consultaMonitor(name);
+                break;
+            case 5:
+                consultaProfessor(name);
+                break;
+            case 6:
+                consultaServente(name);
+                break;
+            default:
+        }
+    }
+
+    public static void remove(){
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("\nSelecione a pessoa que deseja remover");
+        System.out.println("\n 1 - Aluno\n 2 - Cozinheiro\n 3 - Instrutor\n 4 - Monitor\n 5 - Professor\n 6 - Servente");
+        int x = input.nextInt();
+
+        switch(x){
+            case 1:
+                removeAluno(name);
+                break;
+            case 2:
+                removeCozinheiro(name);
+                break;
+            case 3:
+                removeInstrutor(name);
+                break;
+            case 4:
+                removeMonitor(name);
+                break;
+            case 5:
+                removeProfessor(name);
+                break;
+            case 6:
+                removeServente(name);
+                break;
+            default:
+        }
+    }
+
+    public static void atualiza(){
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("\nSelecione a pessoa que deseja atualizar");
+        System.out.println("\n 1 - Aluno\n 2 - Cozinheiro\n 3 - Instrutor\n 4 - Monitor\n 5 - Professor\n 6 - Servente");
+        int x = input.nextInt();
+
+        switch(x){
+            case 1:
+                atualizaAluno(name, cpf, turma, curso);
+                break;
+            case 2:
+                atualizaCozinheiro(name, cpf, salario);
+                break;
+            case 3:
+                atualizaInstrutor(name, cpf, salario, graduacao);
+                break;
+            case 4:
+                atualizaMonitor(name, cpf, salario, graduacao);
+                break;
+            case 5:
+                atualizaProfessor(name, cpf, salario, graduacao);
+                break;
+            case 6:
+                atualizaServente(name, cpf, salario, graduacao);
+                break;
+            default:
+        }
+    }
+
+    public static void list(){
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("\nSelecione a pessoa que deseja listar");
+        System.out.println("\n 1 - Aluno\n 2 - Cozinheiro\n 3 - Instrutor\n 4 - Monitor\n 5 - Professor\n 6 - Servente");
+        int x = input.nextInt();
+
+        switch(x){
+            case 1:
+                listAlunos();
+                break;
+            case 2:
+                listCozinheiros();
+                break;
+            case 3:
+                listInstrutores();
+                break;
+            case 4:
+                listMonitores();
+                break;
+            case 5:
+                listProfessores();
+                break;
+            case 6:
+                listServentes();
+                break;
+            default:
+        }
+    }
+
     public static void insereAluno(String name, String cpf, String turma, String curso){
         for(int i = 0; i < alunos.size(); i++){
             if (alunos.get(i).getNome().equals(name)){
@@ -20,6 +172,7 @@ public class RecursosHumanos {
         }
         alunos.add(new Alunos(name, cpf, turma, curso));
     }
+
     public static void consultaAluno(String name){
         boolean confirm = false;
         for(int i = 0; i < alunos.size(); i++){
@@ -39,6 +192,7 @@ public class RecursosHumanos {
         }
         confirm = false;
     }
+
     public static void removeAluno(String name){
         boolean confirm = false;
         for(int i = 0; i < alunos.size(); i++){ 
@@ -56,6 +210,7 @@ public class RecursosHumanos {
         }
         confirm = false;
     }
+
     public static void atualizaAluno(String name, String cpf, String turma, String curso){
         boolean confirm = false;
         for(int i = 0; i < alunos.size(); i++){
@@ -79,6 +234,7 @@ public class RecursosHumanos {
         }
         confirm = false;
     }
+
     public static void listAlunos(){
         for(int i = 0; i < alunos.size(); i++){
             System.out.println(alunos.get(i).getNome());
