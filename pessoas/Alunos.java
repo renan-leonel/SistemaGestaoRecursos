@@ -1,6 +1,6 @@
-package pessoas;
+package trab1.pessoas;
 
-import recursos.RecursosHumanos;
+import trab1.recursos.RecursosHumanos;
 
 public class Alunos extends RecursosHumanos{
     private String nome;

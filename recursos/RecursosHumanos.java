@@ -1,7 +1,7 @@
-package recursos;
+package trab1.recursos;
 
 import java.util.ArrayList;
-import pessoas.*;
+import trab1.pessoas.*;
 
 public class RecursosHumanos {
     private static ArrayList<Alunos> alunos = new ArrayList<>();
@@ -11,9 +11,6 @@ public class RecursosHumanos {
     private static ArrayList<Professores> professores = new ArrayList<>();
     private static ArrayList<Serventes> serventes = new ArrayList<>();
 
-    //////////////////////////////////////////////////////////////////////////////////////
-    //Alunos
-    //////////////////////////////////////////////////////////////////////////////////////
     public static void insereAluno(String name, String cpf, String turma, String curso){
         for(int i = 0; i < alunos.size(); i++){
             if (alunos.get(i).getNome().equals(name)){
@@ -27,11 +24,13 @@ public class RecursosHumanos {
         boolean confirm = false;
         for(int i = 0; i < alunos.size(); i++){
             if (alunos.get(i).getNome().equals(name)){
+
                 System.out.println("Nome: "+ alunos.get(i).getNome());
                 System.out.println("CPF: "+ alunos.get(i).getCpf());
                 System.out.println("Turma: "+ alunos.get(i).getTurma());
                 System.out.println("Curso: "+ alunos.get(i).getCurso());
                 confirm = true;
+
                 return;
             }
         }
@@ -45,8 +44,10 @@ public class RecursosHumanos {
         for(int i = 0; i < alunos.size(); i++){ 
             if (alunos.get(i).getNome().equals(name)){
                 alunos.remove(i);
+
                 System.out.println("Aluno removido");
                 confirm = true;
+
                 return;
             }
         }
@@ -59,14 +60,17 @@ public class RecursosHumanos {
         boolean confirm = false;
         for(int i = 0; i < alunos.size(); i++){
             if (alunos.get(i).getNome().equals(name)){
+
                 alunos.get(i).setCpf(cpf);
                 alunos.get(i).setTurma(turma);
                 alunos.get(i).setCurso(curso);
+
                 System.out.println("Nome: "+ alunos.get(i).getNome());
                 System.out.println("Novo CPF: "+ alunos.get(i).getCpf());
                 System.out.println("Nova Turma: "+ alunos.get(i).getTurma());
                 System.out.println("Novo Curso: "+ alunos.get(i).getCurso());
                 confirm = true;
+
                 return;
             }
         }
@@ -81,9 +85,6 @@ public class RecursosHumanos {
         }
     }
 
-    //////////////////////////////////////////////////////////////////////////////////////
-    //Cozinheiros
-    //////////////////////////////////////////////////////////////////////////////////////
     public static void insereCozinheiro(String name, String cpf, int salario){
         for(int i = 0; i < cozinheiros.size(); i++){
             if (cozinheiros.get(i).getNome().equals(name)){
@@ -98,10 +99,12 @@ public class RecursosHumanos {
         boolean confirm = false;
         for(int i = 0; i < cozinheiros.size(); i++){
             if (cozinheiros.get(i).getNome().equals(name)){
+                
                 System.out.println("Nome: "+ cozinheiros.get(i).getNome());
                 System.out.println("CPF: "+ cozinheiros.get(i).getCpf());
                 System.out.println("Salario: "+ cozinheiros.get(i).getSalario());
                 confirm = true;
+
                 return;
             }
         }
@@ -116,8 +119,10 @@ public class RecursosHumanos {
         for(int i = 0; i < cozinheiros.size(); i++){
             if (cozinheiros.get(i).getNome().equals(name)){
                 cozinheiros.remove(i);
+
                 System.out.println("Cozinheiro removido");
                 confirm = true;
+
                 return;
             }
         }
@@ -131,12 +136,15 @@ public class RecursosHumanos {
         boolean confirm = false;
         for(int i = 0; i < cozinheiros.size(); i++){
             if (cozinheiros.get(i).getNome().equals(name)){
+
                 cozinheiros.get(i).setCpf(cpf);
                 cozinheiros.get(i).setSalario(salario);
+
                 System.out.println("Nome: "+ cozinheiros.get(i).getNome());
                 System.out.println("Novo CPF: "+ cozinheiros.get(i).getCpf());
                 System.out.println("Novo Salario: "+ cozinheiros.get(i).getSalario());
                 confirm = true;
+
                 return;
             }
         }
@@ -152,13 +160,11 @@ public class RecursosHumanos {
         }
     }
 
-    //////////////////////////////////////////////////////////////////////////////////////
-    //Instrutores
-    //////////////////////////////////////////////////////////////////////////////////////
     public static void insereInstrutor(String name, String cpf, int salario, int graduacao){
         for(int i = 0; i < instrutores.size(); i++){
             if (instrutores.get(i).getNome().equals(name)){
                 System.out.println("Instrutor ja cadastrado");
+
                 return;
             }
         }
@@ -169,11 +175,13 @@ public class RecursosHumanos {
         boolean confirm = false;
         for(int i = 0; i < instrutores.size(); i++){
             if (instrutores.get(i).getNome().equals(name)){
+
                 System.out.println("Nome: "+ instrutores.get(i).getNome());
                 System.out.println("CPF: "+ instrutores.get(i).getCpf());
                 System.out.println("Salario: "+ instrutores.get(i).getSalario());
                 System.out.println("Graduacao: "+ instrutores.get(i).getGraduacao());
                 confirm = true;
+
                 return;
             }
         }
@@ -188,8 +196,10 @@ public class RecursosHumanos {
         for(int i = 0; i < instrutores.size(); i++){
             if (instrutores.get(i).getNome().equals(name)){
                 instrutores.remove(i);
+
                 System.out.println("Instrutor removido");
                 confirm = true;
+
                 return;
             }
         }
@@ -203,14 +213,17 @@ public class RecursosHumanos {
         boolean confirm = false;
         for(int i = 0; i < instrutores.size(); i++){
             if (instrutores.get(i).getNome().equals(name)){
+
                 instrutores.get(i).setCpf(cpf);
                 instrutores.get(i).setSalario(salario);
                 instrutores.get(i).setGraduacao(graduacao);
+
                 System.out.println("Nome: "+ instrutores.get(i).getNome());
                 System.out.println("Novo CPF: "+ instrutores.get(i).getCpf());
                 System.out.println("Novo Salario: "+ instrutores.get(i).getSalario());
                 System.out.println("Nova Graduacao: "+ instrutores.get(i).getSalario());
                 confirm = true;
+
                 return;
             }
         }
@@ -226,28 +239,27 @@ public class RecursosHumanos {
         }
     }
 
-    //////////////////////////////////////////////////////////////////////////////////////
-    //Monitores
-    //////////////////////////////////////////////////////////////////////////////////////
-    public static void insereMonitor(String name, String cpf, int salario, int graduacao){
+    public static void insereMonitor(String name, String cpf, int salario){
         for(int i = 0; i < monitores.size(); i++){
             if (monitores.get(i).getNome().equals(name)){
                 System.out.println("Monitor ja cadastrado");
+
                 return;
             }
         }
-        monitores.add(new Monitores(name, cpf, salario, graduacao));
+        monitores.add(new Monitores(name, cpf, salario));
     }
     
     public static void consultaMonitor(String name){
         boolean confirm = false;
         for(int i = 0; i < monitores.size(); i++){
             if (monitores.get(i).getNome().equals(name)){
+
                 System.out.println("Nome: "+ monitores.get(i).getNome());
                 System.out.println("CPF: "+ monitores.get(i).getCpf());
                 System.out.println("Salario: "+ monitores.get(i).getSalario());
-                System.out.println("Graduacao: "+ monitores.get(i).getGraduacao());
                 confirm = true;
+
                 return;
             }
         }
@@ -261,9 +273,11 @@ public class RecursosHumanos {
         boolean confirm = false;
         for(int i = 0; i < monitores.size(); i++){
             if (monitores.get(i).getNome().equals(name)){
+
                 monitores.remove(i);
                 System.out.println("Monitor removido");
                 confirm = true;
+
                 return;
             }
         }
@@ -277,14 +291,16 @@ public class RecursosHumanos {
         boolean confirm = false;
         for(int i = 0; i < monitores.size(); i++){
             if (monitores.get(i).getNome().equals(name)){
+
                 monitores.get(i).setCpf(cpf);
                 monitores.get(i).setSalario(salario);
-                monitores.get(i).setGraduacao(graduacao);
+
                 System.out.println("Nome: "+ monitores.get(i).getNome());
                 System.out.println("Novo CPF: "+ monitores.get(i).getCpf());
                 System.out.println("Novo Salario: "+ monitores.get(i).getSalario());
                 System.out.println("Nova Graduacao: "+ monitores.get(i).getSalario());
                 confirm = true;
+
                 return;
             }
         }
@@ -300,9 +316,6 @@ public class RecursosHumanos {
         }
     }
 
-    //////////////////////////////////////////////////////////////////////////////////////
-    //Professores
-    //////////////////////////////////////////////////////////////////////////////////////
     public static void insereProfessor(String name, String cpf, int salario, int graduacao){
         for(int i = 0; i < professores.size(); i++){
             if (professores.get(i).getNome().equals(name)){
@@ -374,9 +387,6 @@ public class RecursosHumanos {
         }
     }
 
-    //////////////////////////////////////////////////////////////////////////////////////
-    //Serventes
-    //////////////////////////////////////////////////////////////////////////////////////
     public static void insereServente(String name, String cpf, int salario, int graduacao){
         for(int i = 0; i < serventes.size(); i++){
             if (serventes.get(i).getNome().equals(name)){
