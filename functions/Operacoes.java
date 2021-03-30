@@ -5,7 +5,7 @@ import trab1.material.*;
 import trab1.recursos.*;
 
 public class Operacoes {
-    public static void operarPessoas(RecursosHumanos recursos){
+    public static void operarPessoas(RecursosHumanos people){
         Scanner input = new Scanner(System.in);
 
         int x = 0;

@@ -20,24 +20,29 @@ public class RecursosHumanos {
         System.out.println("\n 1 - Aluno\n 2 - Cozinheiro\n 3 - Instrutor\n 4 - Monitor\n 5 - Professor\n 6 - Servente");
         int x = input.nextInt();
 
+        System.out.println("Nome: ");
+        String name = input.next();
+        System.out.println("CPF: ");
+        String cpf = input.next();
+
         switch(x){
             case 1:
-                insereAluno(name, cpf, turma, curso); // passar so o name e cpf, pegar turma e curso la na funcao por parametro e tirar os parametros daqui e de la
+                insereAluno(name, cpf); // passar so o name e cpf, pegar turma e curso la na funcao por parametro e tirar os parametros daqui e de la
                 break;
             case 2:
-                insereCozinheiro(name, cpf, salario);
+                insereCozinheiro(name, cpf);
                 break;
             case 3:
-                insereInstrutor(name, cpf, salario, graduacao);
+                insereInstrutor(name, cpf);
                 break;
             case 4:
-                insereMonitor(name, cpf, salario);
+                insereMonitor(name, cpf);
                 break;
             case 5:
-                insereProfessor(name, cpf, salario, graduacao);
+                insereProfessor(name, cpf);
                 break;
             case 6:
-                insereServente(name, cpf, salario, graduacao);
+                insereServente(name, cpf);
                 break;
             default:
         }
@@ -49,6 +54,9 @@ public class RecursosHumanos {
         System.out.println("\nSelecione a pessoa que deseja consultar");
         System.out.println("\n 1 - Aluno\n 2 - Cozinheiro\n 3 - Instrutor\n 4 - Monitor\n 5 - Professor\n 6 - Servente");
         int x = input.nextInt();
+
+        System.out.println("Nome: ");
+        String name = input.next();
 
         switch(x){
             case 1:
@@ -80,24 +88,27 @@ public class RecursosHumanos {
         System.out.println("\n 1 - Aluno\n 2 - Cozinheiro\n 3 - Instrutor\n 4 - Monitor\n 5 - Professor\n 6 - Servente");
         int x = input.nextInt();
 
+        System.out.println("Nome: ");
+        String nome = input.next();
+
         switch(x){
             case 1:
-                removeAluno(name);
+                removeAluno(nome);
                 break;
             case 2:
-                removeCozinheiro(name);
+                removeCozinheiro(nome);
                 break;
             case 3:
-                removeInstrutor(name);
+                removeInstrutor(nome);
                 break;
             case 4:
-                removeMonitor(name);
+                removeMonitor(nome);
                 break;
             case 5:
-                removeProfessor(name);
+                removeProfessor(nome);
                 break;
             case 6:
-                removeServente(name);
+                removeServente(nome);
                 break;
             default:
         }
@@ -110,24 +121,27 @@ public class RecursosHumanos {
         System.out.println("\n 1 - Aluno\n 2 - Cozinheiro\n 3 - Instrutor\n 4 - Monitor\n 5 - Professor\n 6 - Servente");
         int x = input.nextInt();
 
+        System.out.println("Nome: ");
+        String name = input.next();
+
         switch(x){
             case 1:
-                atualizaAluno(name, cpf, turma, curso);
+                atualizaAluno(name);
                 break;
             case 2:
-                atualizaCozinheiro(name, cpf, salario);
+                atualizaCozinheiro(name);
                 break;
             case 3:
-                atualizaInstrutor(name, cpf, salario, graduacao);
+                atualizaInstrutor(name);
                 break;
             case 4:
-                atualizaMonitor(name, cpf, salario, graduacao);
+                atualizaMonitor(name);
                 break;
             case 5:
-                atualizaProfessor(name, cpf, salario, graduacao);
+                atualizaProfessor(name);
                 break;
             case 6:
-                atualizaServente(name, cpf, salario, graduacao);
+                atualizaServente(name);
                 break;
             default:
         }
@@ -163,13 +177,21 @@ public class RecursosHumanos {
         }
     }
 
-    public static void insereAluno(String name, String cpf, String turma, String curso){
+    public static void insereAluno(String name, String cpf){
+        Scanner input = new Scanner(System.in);
+
         for(int i = 0; i < alunos.size(); i++){
             if (alunos.get(i).getNome().equals(name)){
                 System.out.println("Aluno já existe");
                 return;
             }
         }
+        
+        System.out.println("Turma: ");
+        String turma = input.next();
+        System.out.println("Curso: ");
+        String curso = input.next();
+
         alunos.add(new Alunos(name, cpf, turma, curso));
     }
 
@@ -211,13 +233,23 @@ public class RecursosHumanos {
         confirm = false;
     }
 
-    public static void atualizaAluno(String name, String cpf, String turma, String curso){
+    public static void atualizaAluno(String name){
+        Scanner input = new Scanner(System.in);
+
         boolean confirm = false;
         for(int i = 0; i < alunos.size(); i++){
             if (alunos.get(i).getNome().equals(name)){
 
+                System.out.println("Digite novo CPF: ");
+                String cpf = input.nextLine();
                 alunos.get(i).setCpf(cpf);
+
+                System.out.println("Digite nova turma: ");
+                String turma = input.nextLine();
                 alunos.get(i).setTurma(turma);
+
+                System.out.println("Digite novo curso: ");
+                String curso = input.nextLine();
                 alunos.get(i).setCurso(curso);
 
                 System.out.println("Nome: "+ alunos.get(i).getNome());
@@ -241,13 +273,19 @@ public class RecursosHumanos {
         }
     }
 
-    public static void insereCozinheiro(String name, String cpf, int salario){
+    public static void insereCozinheiro(String name, String cpf){
+        Scanner input = new Scanner(System.in);
+
         for(int i = 0; i < cozinheiros.size(); i++){
             if (cozinheiros.get(i).getNome().equals(name)){
                 System.out.println("Cozinheiro ja cadastrado");
                 return;
             }
         }
+
+        System.out.println("Salário: ");
+        int salario = input.nextInt();
+
         cozinheiros.add(new Cozinheiros(name, cpf, salario));
     }
     
@@ -288,12 +326,19 @@ public class RecursosHumanos {
         confirm = false;
     }
 
-    public static void atualizaCozinheiro(String name, String cpf, int salario){
+    public static void atualizaCozinheiro(String name){
+        Scanner input = new Scanner(System.in);
+        
         boolean confirm = false;
         for(int i = 0; i < cozinheiros.size(); i++){
             if (cozinheiros.get(i).getNome().equals(name)){
 
+                System.out.println("Digite novo CPF: ");
+                String cpf = input.nextLine();
                 cozinheiros.get(i).setCpf(cpf);
+
+                System.out.println("Digite novo salário: ");
+                int salario = input.nextInt();
                 cozinheiros.get(i).setSalario(salario);
 
                 System.out.println("Nome: "+ cozinheiros.get(i).getNome());
@@ -316,7 +361,9 @@ public class RecursosHumanos {
         }
     }
 
-    public static void insereInstrutor(String name, String cpf, int salario, int graduacao){
+    public static void insereInstrutor(String name, String cpf){
+        Scanner input = new Scanner(System.in);
+        
         for(int i = 0; i < instrutores.size(); i++){
             if (instrutores.get(i).getNome().equals(name)){
                 System.out.println("Instrutor ja cadastrado");
@@ -324,6 +371,12 @@ public class RecursosHumanos {
                 return;
             }
         }
+
+        System.out.println("Salário: ");
+        int salario = input.nextInt();
+        System.out.println("Graduação: ");
+        int graduacao = input.nextInt();
+
         instrutores.add(new Instrutores(name, cpf, salario, graduacao));
     }
     
@@ -365,19 +418,29 @@ public class RecursosHumanos {
         confirm = false;
     }
 
-    public static void atualizaInstrutor(String name, String cpf, int salario, int graduacao){
+    public static void atualizaInstrutor(String name){
+        Scanner input = new Scanner(System.in);
+
         boolean confirm = false;
         for(int i = 0; i < instrutores.size(); i++){
             if (instrutores.get(i).getNome().equals(name)){
 
+                System.out.println("Digite novo CPF: ");
+                String cpf = input.nextLine();
                 instrutores.get(i).setCpf(cpf);
+
+                System.out.println("Digite novo salário: ");
+                int salario = input.nextInt();
                 instrutores.get(i).setSalario(salario);
+
+                System.out.println("Digite nova graduação: ");
+                int graduacao = input.nextInt();
                 instrutores.get(i).setGraduacao(graduacao);
 
                 System.out.println("Nome: "+ instrutores.get(i).getNome());
                 System.out.println("Novo CPF: "+ instrutores.get(i).getCpf());
                 System.out.println("Novo Salario: "+ instrutores.get(i).getSalario());
-                System.out.println("Nova Graduacao: "+ instrutores.get(i).getSalario());
+                System.out.println("Nova Graduacao: "+ instrutores.get(i).getGraduacao());
                 confirm = true;
 
                 return;
@@ -395,7 +458,9 @@ public class RecursosHumanos {
         }
     }
 
-    public static void insereMonitor(String name, String cpf, int salario){
+    public static void insereMonitor(String name, String cpf){
+        Scanner input = new Scanner(System.in);
+
         for(int i = 0; i < monitores.size(); i++){
             if (monitores.get(i).getNome().equals(name)){
                 System.out.println("Monitor ja cadastrado");
@@ -403,6 +468,10 @@ public class RecursosHumanos {
                 return;
             }
         }
+
+        System.out.println("Salário: ");
+        int salario = input.nextInt();
+
         monitores.add(new Monitores(name, cpf, salario));
     }
     
@@ -443,18 +512,24 @@ public class RecursosHumanos {
         confirm = false;
     }
 
-    public static void atualizaMonitor(String name, String cpf, int salario, int graduacao){
+    public static void atualizaMonitor(String name){
+        Scanner input = new Scanner(System.in);
+        
         boolean confirm = false;
         for(int i = 0; i < monitores.size(); i++){
             if (monitores.get(i).getNome().equals(name)){
 
+                System.out.println("Digite novo CPF: ");
+                String cpf = input.nextLine();
                 monitores.get(i).setCpf(cpf);
+
+                System.out.println("Digite novo salário: ");
+                int salario = input.nextInt();
                 monitores.get(i).setSalario(salario);
 
                 System.out.println("Nome: "+ monitores.get(i).getNome());
                 System.out.println("Novo CPF: "+ monitores.get(i).getCpf());
                 System.out.println("Novo Salario: "+ monitores.get(i).getSalario());
-                System.out.println("Nova Graduacao: "+ monitores.get(i).getSalario());
                 confirm = true;
 
                 return;
@@ -472,13 +547,21 @@ public class RecursosHumanos {
         }
     }
 
-    public static void insereProfessor(String name, String cpf, int salario, int graduacao){
+    public static void insereProfessor(String name, String cpf){
+        Scanner input = new Scanner(System.in);
+
         for(int i = 0; i < professores.size(); i++){
             if (professores.get(i).getNome().equals(name)){
                 System.out.println("Professor ja cadastrado");
                 return;
             }
         }
+
+        System.out.println("Salário: ");
+        int salario = input.nextInt();
+        System.out.println("Salário: ");
+        int graduacao = input.nextInt();
+
         professores.add(new Professores(name, cpf, salario, graduacao));
     }
     
@@ -516,17 +599,29 @@ public class RecursosHumanos {
         confirm = false;
     }
 
-    public static void atualizaProfessor(String name, String cpf, int salario, int graduacao){
+    public static void atualizaProfessor(String name){
+        Scanner input = new Scanner(System.in);
+
         boolean confirm = false;
         for(int i = 0; i < professores.size(); i++){
             if (professores.get(i).getNome().equals(name)){
+
+                System.out.println("Digite novo CPF: ");
+                String cpf = input.nextLine();
                 professores.get(i).setCpf(cpf);
+
+                System.out.println("Digite novo salário: ");
+                int salario = input.nextInt();
                 professores.get(i).setSalario(salario);
+
+                System.out.println("Digite nova graduação: ");
+                int graduacao = input.nextInt();
                 professores.get(i).setGraduacao(graduacao);
+
                 System.out.println("Nome: "+ professores.get(i).getNome());
                 System.out.println("Novo CPF: "+ professores.get(i).getCpf());
                 System.out.println("Novo Salario: "+ professores.get(i).getSalario());
-                System.out.println("Nova Graduacao: "+ professores.get(i).getSalario());
+                System.out.println("Nova Graduacao: "+ professores.get(i).getGraduacao());
                 confirm = true;
                 return;
             }
@@ -543,14 +638,20 @@ public class RecursosHumanos {
         }
     }
 
-    public static void insereServente(String name, String cpf, int salario, int graduacao){
+    public static void insereServente(String name, String cpf){
+        Scanner input = new Scanner(System.in);
+
         for(int i = 0; i < serventes.size(); i++){
             if (serventes.get(i).getNome().equals(name)){
                 System.out.println("Servente ja cadastrado");
                 return;
             }
         }
-        serventes.add(new Serventes(name, cpf, salario, graduacao));
+
+        System.out.println("Salário: ");
+        int salario = input.nextInt();
+
+        serventes.add(new Serventes(name, cpf, salario));
     }
     
     public static void consultaServente(String name){
@@ -586,12 +687,21 @@ public class RecursosHumanos {
         confirm = false;
     }
 
-    public static void atualizaServente(String name, String cpf, int salario, int graduacao){
+    public static void atualizaServente(String name){
+        Scanner input = new Scanner(System.in);
+        
         boolean confirm = false;
         for(int i = 0; i < serventes.size(); i++){
             if (serventes.get(i).getNome().equals(name)){
+
+                System.out.println("Digite novo CPF: ");
+                String cpf = input.nextLine();
                 serventes.get(i).setCpf(cpf);
+
+                System.out.println("Digite novo salário: ");
+                int salario = input.nextInt();
                 serventes.get(i).setSalario(salario);
+
                 System.out.println("Nome: "+ serventes.get(i).getNome());
                 System.out.println("Novo CPF: "+ serventes.get(i).getCpf());
                 System.out.println("Novo Salario: "+ serventes.get(i).getSalario());

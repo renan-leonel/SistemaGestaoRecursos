@@ -18,7 +18,7 @@ public class Main {
 
         int x = input.nextInt();
         if(x == 1){
-            // Operacoes.operarPessoas(recursos);
+            Operacoes.operarPessoas(people);
         }
 
         else if(x == 2){

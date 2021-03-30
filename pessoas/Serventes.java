@@ -7,7 +7,7 @@ public class Serventes extends RecursosHumanos{
     private String cpf;
     private int salario;
 
-    public Serventes(String name, String num, int salary, int graduation){
+    public Serventes(String name, String num, int salary){
         this.nome = name;
         this.cpf = num;
         this.salario = salary;
