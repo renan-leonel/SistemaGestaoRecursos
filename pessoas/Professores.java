@@ -8,6 +8,11 @@ public class Professores extends RecursosHumanos{
     private int salario;
     public int graduacao;
 
+    private int livros;
+    private int giz;
+    private int apagador;
+    private int pincel;
+
     public Professores(String name, String num, int salary, int graduation){
         this.nome = name;
         this.cpf = num;
@@ -46,4 +51,11 @@ public class Professores extends RecursosHumanos{
     public void setGraduacao(int graduation) {
         this.graduacao = graduation;
     }
+
+    public void distribuiMaterial(){
+        this.livros = this.livros + 1;
+        this.giz = this.giz + 1;
+        this.apagador = this.apagador + 1;
+        this.pincel = this.pincel + 1;
+    } 
 }

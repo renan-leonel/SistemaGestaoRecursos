@@ -7,6 +7,8 @@ public class Monitores extends RecursosHumanos{
     private String cpf;
     private int salario;
 
+    private int caneta;
+
     public Monitores(String name, String num, int salary){
         this.nome = name;
         this.cpf = num;
@@ -35,5 +37,9 @@ public class Monitores extends RecursosHumanos{
 
     public void setSalario(int salary) {
         this.salario = salary;
+    }
+
+    public void distribuiMaterial(){
+        this.caneta = this.caneta + 1;
     }
 }

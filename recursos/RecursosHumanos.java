@@ -720,4 +720,58 @@ public class RecursosHumanos {
             System.out.println(serventes.get(i).getNome());
         }
     }
+
+    public static void distribuiMateriais(int numero){
+        switch(numero){
+            case 1:
+                if(alunos.size() >= 1){
+                    for(int i = 0; i < alunos.size(); i++){
+                        alunos.get(i).distribuiMaterial();
+                    }
+                }
+                break;
+            case 2:
+                if(cozinheiros.size() >= 1){
+                    for(int i = 0; i < cozinheiros.size(); i++){
+                        cozinheiros.get(i).distribuiMaterial();
+                    }
+                }
+                break;
+            case 3:
+                if(instrutores.size() >= 1){
+                    for(int i = 0; i < instrutores.size(); i++){
+                        instrutores.get(i).distribuiMaterial();
+                    }
+                }
+                break;
+            case 4:
+                if(monitores.size() >= 1){
+                    for(int i = 0; i < monitores.size(); i++){
+                        monitores.get(i).distribuiMaterial();
+                    }
+                }
+                break;
+            case 5:
+                if(professores.size() >= 1){
+                    for(int i = 0; i < professores.size(); i++){
+                        professores.get(i).distribuiMaterial();
+                    }
+                }
+                break;
+            case 6:
+                if(serventes.size() >= 1){
+                    for(int i = 0; i < serventes.size(); i++){
+                        serventes.get(i).distribuiMaterial();
+                    }
+                }
+                break;
+            default:
+                System.out.println("erro");
+                return;
+        }
+    }
+
+    
+
 }
+

@@ -8,6 +8,11 @@ public class Instrutores extends RecursosHumanos{
     private int salario;
     public int graduacao;
 
+    private int caneta = 0;
+    private int quadroBranco = 0;
+    private int quadroNegro = 0;
+
+
     public Instrutores(String name, String num, int salary, int graduation){
         this.nome = name;
         this.cpf = num;
@@ -45,6 +50,12 @@ public class Instrutores extends RecursosHumanos{
 
     public void setGraduacao(int graduation) {
         this.graduacao = graduation;
+    }
+
+    public void distribuiMaterial(){
+        this.quadroBranco = this.quadroBranco + 1;
+        this.quadroNegro = this.quadroNegro + 1;
+        this.caneta = this.caneta + 1;
     }
 
 }

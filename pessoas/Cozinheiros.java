@@ -7,6 +7,8 @@ public class Cozinheiros extends RecursosHumanos{
     private String cpf;
     private int salario;
 
+    private int sabaoBarra = 0;
+
     public Cozinheiros(String name, String num, int salary){
         this.nome = name;
         this.cpf = num;
@@ -35,5 +37,9 @@ public class Cozinheiros extends RecursosHumanos{
 
     public void setSalario(int salario) {
         this.salario = salario;
+    }
+
+    public void distribuiMaterial(){
+        this.sabaoBarra = this.sabaoBarra + 1;
     }
 }

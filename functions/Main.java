@@ -10,7 +10,7 @@ public class Main {
         MaterialDidatico didatico = new MaterialDidatico();
         MaterialEscolar escolar = new MaterialEscolar();
         MaterialLimpeza limpeza = new MaterialLimpeza();
-        RecursosHumanos people = new RecursosHumanos();
+        RecursosHumanos pessoas = new RecursosHumanos();
         Scanner input = new Scanner(System.in);
 
         System.out.println("Selecione o que deseja operar:");
@@ -18,16 +18,17 @@ public class Main {
 
         int x = input.nextInt();
         if(x == 1){
-            Operacoes.operarPessoas(people);
+            Operacoes.operarPessoas(pessoas);
         }
 
         else if(x == 2){
-            Operacoes.operarMateriais(didatico, escolar, limpeza);
+            Operacoes.operarMateriais(didatico, escolar, limpeza, pessoas);
         }
 
         else{
             System.out.println("Opção inválida");
             return;
+
         }       
     }
 }

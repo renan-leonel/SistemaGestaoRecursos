@@ -5,19 +5,20 @@ import trab1.material.*;
 import trab1.recursos.*;
 
 public class Operacoes {
-    public static void operarPessoas(RecursosHumanos people){
+    public static void operarPessoas(RecursosHumanos pessoas){
         Scanner input = new Scanner(System.in);
 
         int x = 0;
 
-        while (x != 6) {
+        while (x != 7) {
             System.out.println("Selecione a ação desejada: ");
             System.out.println("1 -> Inserir: ");
             System.out.println("2 -> Consultar: ");
             System.out.println("3 -> Remover: ");
             System.out.println("4 -> Atualizar: ");
             System.out.println("5 -> Listar: ");
-            System.err.println("6 -> Sair: ");
+            System.out.println("6 -> Distribuir: ");
+            System.err.println("7 -> Sair: ");
             x = input.nextInt();
 
             switch(x){
@@ -37,6 +38,9 @@ public class Operacoes {
                     RecursosHumanos.list();
                     break;
                 case 6:
+                    auto.distruibuicao(pessoas);
+                    break;
+                case 7:
                     System.err.println("Encerrando programa...");
                     break;
                 default:
@@ -45,7 +49,7 @@ public class Operacoes {
         }
     }
 
-    public static void operarMateriais(MaterialDidatico didatico, MaterialEscolar escolar, MaterialLimpeza limpeza){
+    public static void operarMateriais(MaterialDidatico didatico, MaterialEscolar escolar, MaterialLimpeza limpeza, RecursosHumanos pessoas){
         Scanner input = new Scanner(System.in);
 
         int x = 0;

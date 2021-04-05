@@ -7,6 +7,10 @@ public class Serventes extends RecursosHumanos{
     private String cpf;
     private int salario;
 
+    private int alvejante = 0;
+    private int aguaSanitaria = 0;
+    private int sabaoPo = 0;
+
     public Serventes(String name, String num, int salary){
         this.nome = name;
         this.cpf = num;
@@ -35,5 +39,11 @@ public class Serventes extends RecursosHumanos{
 
     public void setSalario(int salary) {
         this.salario = salary;
+    }
+
+    public void distribuiMaterial(){
+        this.aguaSanitaria = this.aguaSanitaria + 1;
+        this.alvejante = this.alvejante + 1;
+        this.sabaoPo = this.sabaoPo + 1;
     }
 }
