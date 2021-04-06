@@ -5,7 +5,7 @@ import java.util.Scanner;
 import trab1.recursos.*;
 import trab1.material.*;
 
-public class distribuicao {
+public class Distribuicao {
 
     public static void distruibuicaoMat(RecursosHumanos pessoas){
         Scanner input = new Scanner(System.in);

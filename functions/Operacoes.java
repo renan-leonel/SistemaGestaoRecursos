@@ -38,7 +38,7 @@ public class Operacoes {
                     RecursosHumanos.list();
                     break;
                 case 6:
-                    distribuicao.mensal(pessoas);
+                    Distribuicao.mensal(pessoas);
                     break;
                 case 7:
                     System.err.println("\nEncerrando programa...");
@@ -79,7 +79,7 @@ public class Operacoes {
                     RecursosMateriais.gerarRelatorio(didatico, escolar, limpeza);
                     break;
                 case 5:
-                    distribuicao.relatorioSemanal(didatico, escolar, limpeza);
+                    Distribuicao.relatorioSemanal(didatico, escolar, limpeza);
                     break;
                 case 6:
                     RecursosMateriais.buscarDados(didatico, escolar, limpeza);
