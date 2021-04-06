@@ -11,14 +11,14 @@ public class Operacoes {
         int x = 0;
 
         while (x != 7) {
-            System.out.println("Selecione a ação desejada: ");
-            System.out.println("1 -> Inserir: ");
-            System.out.println("2 -> Consultar: ");
-            System.out.println("3 -> Remover: ");
-            System.out.println("4 -> Atualizar: ");
-            System.out.println("5 -> Listar: ");
-            System.out.println("6 -> Distribuir: ");
-            System.err.println("7 -> Sair: ");
+            System.out.println("\nSelecione a ação desejada: ");
+            System.out.println("\n1 -> Inserir: ");
+            System.out.println("\n2 -> Consultar: ");
+            System.out.println("\n3 -> Remover: ");
+            System.out.println("\n4 -> Atualizar: ");
+            System.out.println("\n5 -> Listar: ");
+            System.out.println("\n6 -> Distribuir: ");
+            System.err.println("\n7 -> Sair: ");
             x = input.nextInt();
 
             switch(x){
@@ -38,10 +38,10 @@ public class Operacoes {
                     RecursosHumanos.list();
                     break;
                 case 6:
-                    auto.distruibuicao(pessoas);
+                    distribuicao.mensal(pessoas);
                     break;
                 case 7:
-                    System.err.println("Encerrando programa...");
+                    System.err.println("\nEncerrando programa...");
                     break;
                 default:
                     System.out.println("Erro");
@@ -54,14 +54,15 @@ public class Operacoes {
 
         int x = 0;
 
-        while (x != 6) {
-            System.out.println("Selecione a ação desejada: ");
-            System.out.println("1 -> Cadastrar: ");
-            System.out.println("2 -> Atualizar: ");
-            System.out.println("3 -> Remover: ");
-            System.out.println("4 -> Gerar relatório: ");
-            System.out.println("5 -> Buscar dados: ");
-            System.err.println("6 -> Sair: ");
+        while (x != 7) {
+            System.out.println("\nSelecione a ação desejada: ");
+            System.out.println("\n1 -> Cadastrar: ");
+            System.out.println("\n2 -> Atualizar: ");
+            System.out.println("\n3 -> Remover: ");
+            System.out.println("\n4 -> Gerar relatório: ");
+            System.out.println("\n5 -> Gerar relatório semanal: ");
+            System.out.println("\n6 -> Buscar dados: ");
+            System.err.println("\n7 -> Sair: ");
             x = input.nextInt();
 
             switch (x) {
@@ -78,9 +79,12 @@ public class Operacoes {
                     RecursosMateriais.gerarRelatorio(didatico, escolar, limpeza);
                     break;
                 case 5:
-                    RecursosMateriais.buscarDados(didatico, escolar, limpeza);
+                    distribuicao.relatorioSemanal(didatico, escolar, limpeza);
                     break;
                 case 6:
+                    RecursosMateriais.buscarDados(didatico, escolar, limpeza);
+                    break;
+                case 7:
                     System.out.println("Encerrando programa...");
                     break;
                 default:

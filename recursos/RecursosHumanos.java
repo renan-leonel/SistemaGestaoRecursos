@@ -710,7 +710,7 @@ public class RecursosHumanos {
             }
         }
         if(!confirm){
-            System.out.println("Servente não encontrado");
+            System.out.println("\nServente não encontrado");
         }
         confirm = false;
     }

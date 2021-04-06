@@ -13,7 +13,7 @@ public class Main {
         RecursosHumanos pessoas = new RecursosHumanos();
         Scanner input = new Scanner(System.in);
 
-        System.out.println("Selecione o que deseja operar:");
+        System.out.println("\nSelecione o que deseja operar:");
         System.out.println("\n 1 - Recursos Humanos\n 2 - Recursos Materiais\n");
 
         int x = input.nextInt();
