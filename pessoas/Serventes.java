@@ -1,11 +1,9 @@
 package trab1.pessoas;
 
-import trab1.recursos.RecursosHumanos;
-
-public class Serventes extends RecursosHumanos{
+public class Serventes extends Pessoa{
     //atributos
-    private String nome;
-    private String cpf;
+    // private String nome;
+    // private String cpf;
     private int salario;
 
     //materiais que podem ser entregues
@@ -14,8 +12,9 @@ public class Serventes extends RecursosHumanos{
     private int sabaoPo = 0;
 
     public Serventes(String name, String num, int salary){
-        this.nome = name;
-        this.cpf = num;
+        // this.nome = name;
+        // this.cpf = num;
+        super(name, num);
         this.salario = salary;
     }
 

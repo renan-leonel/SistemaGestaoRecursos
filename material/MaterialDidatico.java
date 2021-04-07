@@ -1,8 +1,6 @@
 package trab1.material;
 
-import trab1.recursos.RecursosMateriais;
-
-public class MaterialDidatico extends RecursosMateriais{
+public class MaterialDidatico{
     private int livros = 0;
     private int quadroNegro = 0;
     private int quadroBranco = 0;

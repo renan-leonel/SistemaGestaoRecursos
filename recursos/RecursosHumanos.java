@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 import trab1.pessoas.*;
 
-public class RecursosHumanos {
+public class RecursosHumanos{
     private static ArrayList<Alunos> alunos = new ArrayList<>();
     private static ArrayList<Cozinheiros> cozinheiros = new ArrayList<>();
     private static ArrayList<Instrutores> instrutores = new ArrayList<>();
@@ -13,6 +13,25 @@ public class RecursosHumanos {
     private static ArrayList<Professores> professores = new ArrayList<>();
     private static ArrayList<Serventes> serventes = new ArrayList<>();
 
+    public int getQuantidades(int _num){
+        switch(_num){
+            case 1:
+                return alunos.size();
+            case 2:
+                return cozinheiros.size();
+            case 3:
+                return instrutores.size();
+            case 4:
+                return monitores.size();
+            case 5:
+                return professores.size();
+            case 6:
+                return serventes.size();
+            default:
+                System.out.println("Erro");
+                return 0;
+        }
+    }
     //insere uma nova pessoa no array escolhido, para cada pessoa uma chamada de função
     public static void insere(){
         Scanner input = new Scanner(System.in);
@@ -735,7 +754,7 @@ public class RecursosHumanos {
     //função que distribui os materiais para a pessoa escolhida
     //realiza uma chamada da função distribuiMaterial(), que existe em cada classe de pessoas
     //incrementa em 1 todos os atributos de recursos materiais da pessoa escolhida
-    public static void distribuiMateriais(int numero){
+    public void distribuiMateriais(int numero){
         switch(numero){
             case 1:
                 if(alunos.size() >= 1){

@@ -13,22 +13,31 @@ public class Main {
         RecursosHumanos pessoas = new RecursosHumanos();
         Scanner input = new Scanner(System.in);
 
-        System.out.println("\nSelecione o que deseja operar:");
-        System.out.println("\n 1 - Recursos Humanos\n 2 - Recursos Materiais\n");
+        int x = 0;
 
-        int x = input.nextInt();
-        if(x == 1){
-            Operacoes.operarPessoas(pessoas);
-        }
+        while(x != 3){ 
 
-        else if(x == 2){
-            Operacoes.operarMateriais(didatico, escolar, limpeza, pessoas);
-        }
+            System.out.println("\nSelecione o que deseja operar:");
+            System.out.println("\n 1 - Recursos Humanos\n 2 - Recursos Materiais\n 3 - Finalizar Programa\n");
+            x = input.nextInt();
 
-        else{
-            System.out.println("Opção inválida");
-            return;
+            if(x == 1){
+                Operacoes.operarPessoas(pessoas);
+            }
 
-        }       
+            else if(x == 2){
+                Operacoes.operarMateriais(didatico, escolar, limpeza, pessoas);
+            }
+
+            else if(x == 3){
+                System.out.println("Finalizando Programa");
+                input.close();
+            }
+
+            else{
+                System.out.println("Opção inválida");
+                return;
+            }     
+        }  
     }
 }

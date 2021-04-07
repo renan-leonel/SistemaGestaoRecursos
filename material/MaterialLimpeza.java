@@ -1,8 +1,6 @@
 package trab1.material;
 
-import trab1.recursos.RecursosMateriais;
-
-public class MaterialLimpeza extends RecursosMateriais{
+public class MaterialLimpeza{
     private int alvejante = 0;
     private int sabaoPo = 0;
     private int aguaSanitaria = 0;

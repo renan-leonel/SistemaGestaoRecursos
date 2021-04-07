@@ -11,15 +11,14 @@ public class Operacoes {
 
         int x = 0;
 
-        while (x != 7) {
+        while (x != 6) {
             System.out.println("\nSelecione a ação desejada: ");
             System.out.println("\n1 -> Inserir: ");
             System.out.println("\n2 -> Consultar: ");
             System.out.println("\n3 -> Remover: ");
             System.out.println("\n4 -> Atualizar: ");
             System.out.println("\n5 -> Listar: ");
-            System.out.println("\n6 -> Distribuir: ");
-            System.err.println("\n7 -> Sair: ");
+            System.err.println("\n6 -> Sair: ");
             x = input.nextInt();
 
             switch(x){
@@ -39,10 +38,7 @@ public class Operacoes {
                     RecursosHumanos.list();
                     break;
                 case 6:
-                    Distribuicao.mensal(pessoas);
-                    break;
-                case 7:
-                    System.err.println("\nEncerrando programa...");
+                    System.out.println("Retornando ao menu principal.");
                     break;
                 default:
                     System.out.println("Erro");
@@ -56,7 +52,7 @@ public class Operacoes {
 
         int x = 0;
 
-        while (x != 7) {
+        while (x != 8) {
             System.out.println("\nSelecione a ação desejada: ");
             System.out.println("\n1 -> Cadastrar: ");
             System.out.println("\n2 -> Atualizar: ");
@@ -64,7 +60,8 @@ public class Operacoes {
             System.out.println("\n4 -> Gerar relatório: ");
             System.out.println("\n5 -> Gerar relatório semanal: ");
             System.out.println("\n6 -> Buscar dados: ");
-            System.err.println("\n7 -> Sair: ");
+            System.err.println("\n7 -> Distribuir Materiais: ");
+            System.err.println("\n8 -> Sair: ");
             x = input.nextInt();
 
             switch (x) {
@@ -87,7 +84,10 @@ public class Operacoes {
                     RecursosMateriais.buscarDados(didatico, escolar, limpeza);
                     break;
                 case 7:
-                    System.out.println("Encerrando programa...");
+                    Distribuicao.mensal(pessoas, didatico, escolar, limpeza);
+                    break;
+                case 8:
+                    System.out.println("Retornando ao menu principal.");
                     break;
                 default:
                     System.out.println("erro");
