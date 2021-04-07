@@ -13,6 +13,7 @@ public class RecursosHumanos {
     private static ArrayList<Professores> professores = new ArrayList<>();
     private static ArrayList<Serventes> serventes = new ArrayList<>();
 
+    //insere uma nova pessoa no array escolhido, para cada pessoa uma chamada de função
     public static void insere(){
         Scanner input = new Scanner(System.in);
 
@@ -27,7 +28,7 @@ public class RecursosHumanos {
 
         switch(x){
             case 1:
-                insereAluno(name, cpf); // passar so o name e cpf, pegar turma e curso la na funcao por parametro e tirar os parametros daqui e de la
+                insereAluno(name, cpf);
                 break;
             case 2:
                 insereCozinheiro(name, cpf);
@@ -48,6 +49,7 @@ public class RecursosHumanos {
         }
     }
 
+    //consulta uma  pessoa no array, printando todos os seus atributos em tela. Para cada pessoa uma chamada de função
     public static void consulta(){
         Scanner input = new Scanner(System.in);
 
@@ -81,6 +83,7 @@ public class RecursosHumanos {
         }
     }
 
+    //remove uma  pessoa no array a partir do nome, para cada pessoa uma chamada de função
     public static void remove(){
         Scanner input = new Scanner(System.in);
 
@@ -114,6 +117,7 @@ public class RecursosHumanos {
         }
     }
 
+    //atualiza todos os atributos de uma pessoa a partir do nome, para cada pessoa uma chamada de função
     public static void atualiza(){
         Scanner input = new Scanner(System.in);
 
@@ -147,6 +151,7 @@ public class RecursosHumanos {
         }
     }
 
+    //realiza uma listagem de todas as pessoas cadastradas no array escolhido, para cada pessoa uma chamada de função
     public static void list(){
         Scanner input = new Scanner(System.in);
 
@@ -177,6 +182,7 @@ public class RecursosHumanos {
         }
     }
 
+    // todas as chamadas de funções para a pessoa aluno
     public static void insereAluno(String name, String cpf){
         Scanner input = new Scanner(System.in);
 
@@ -273,6 +279,7 @@ public class RecursosHumanos {
         }
     }
 
+    // todas as chamadas de funções para a pessoa cozinheiro
     public static void insereCozinheiro(String name, String cpf){
         Scanner input = new Scanner(System.in);
 
@@ -361,6 +368,7 @@ public class RecursosHumanos {
         }
     }
 
+    // todas as chamadas de funções para a pessoa instrutor
     public static void insereInstrutor(String name, String cpf){
         Scanner input = new Scanner(System.in);
         
@@ -458,6 +466,7 @@ public class RecursosHumanos {
         }
     }
 
+    // todas as chamadas de funções para a pessoa monitor
     public static void insereMonitor(String name, String cpf){
         Scanner input = new Scanner(System.in);
 
@@ -547,6 +556,7 @@ public class RecursosHumanos {
         }
     }
 
+    // todas as chamadas de funções para a pessoa professor
     public static void insereProfessor(String name, String cpf){
         Scanner input = new Scanner(System.in);
 
@@ -638,6 +648,7 @@ public class RecursosHumanos {
         }
     }
 
+    // todas as chamadas de funções para a pessoa servente
     public static void insereServente(String name, String cpf){
         Scanner input = new Scanner(System.in);
 
@@ -721,6 +732,9 @@ public class RecursosHumanos {
         }
     }
 
+    //função que distribui os materiais para a pessoa escolhida
+    //realiza uma chamada da função distribuiMaterial(), que existe em cada classe de pessoas
+    //incrementa em 1 todos os atributos de recursos materiais da pessoa escolhida
     public static void distribuiMateriais(int numero){
         switch(numero){
             case 1:

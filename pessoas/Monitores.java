@@ -3,10 +3,12 @@ package trab1.pessoas;
 import trab1.recursos.RecursosHumanos;
 
 public class Monitores extends RecursosHumanos{
+    //atributos
     private String nome;
     private String cpf;
     private int salario;
 
+    //materiais que podem ser entregues
     private int caneta;
 
     public Monitores(String name, String num, int salary){
@@ -39,6 +41,9 @@ public class Monitores extends RecursosHumanos{
         this.salario = salary;
     }
 
+    //função presente em todas as pessoas, faz a distribuição dos materiais associados à cada pessoa
+    //função é chamada na classe Distribuicao
+    //incrementa em 1 a quantidade de materiais
     public void distribuiMaterial(){
         this.caneta = this.caneta + 1;
     }

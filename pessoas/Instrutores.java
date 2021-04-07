@@ -3,11 +3,13 @@ package trab1.pessoas;
 import trab1.recursos.RecursosHumanos;
 
 public class Instrutores extends RecursosHumanos{
+    //atributos
     private String nome;
     private String cpf;
     private int salario;
     public int graduacao;
 
+    //materiais que podem ser entregues
     private int caneta = 0;
     private int quadroBranco = 0;
     private int quadroNegro = 0;
@@ -52,6 +54,9 @@ public class Instrutores extends RecursosHumanos{
         this.graduacao = graduation;
     }
 
+    //função presente em todas as pessoas, faz a distribuição dos materiais associados à cada pessoa
+    //função é chamada na classe Distribuicao
+    //incrementa em 1 a quantidade de materiais
     public void distribuiMaterial(){
         this.quadroBranco = this.quadroBranco + 1;
         this.quadroNegro = this.quadroNegro + 1;

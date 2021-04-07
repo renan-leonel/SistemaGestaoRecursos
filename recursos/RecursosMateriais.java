@@ -5,6 +5,7 @@ import trab1.material.*;
 
 public class RecursosMateriais {
 
+    //cadastra a quantidade inicial de todos os materiais disponíveis
     public static void cadastrar(MaterialDidatico didatico, MaterialEscolar escolar, MaterialLimpeza limpeza) {
         Scanner input = new Scanner(System.in);
 
@@ -70,6 +71,9 @@ public class RecursosMateriais {
         limpeza.setSabaoBarra(sabaoBarra);
     }
 
+    //atualiza a quantidade de materiais disponíveis, divididos entre os 3 tipos de materiais existentes
+    //ao selecionar um tipo de material, será possível atualizar todos os materiais do tipo escolhido
+    //é realizada uma chamada de função para cada tipo de material
     public static void atualizar(MaterialDidatico didatico, MaterialEscolar escolar, MaterialLimpeza limpeza) {
         Scanner input = new Scanner(System.in);
 
@@ -93,7 +97,7 @@ public class RecursosMateriais {
         }
     }
 
-    // função que atualiza os recursos materiais
+    // função que atualiza os materiais didáticos
     public static void attMatDid(MaterialDidatico didatico) {
         Scanner input = new Scanner(System.in);
 
@@ -141,7 +145,7 @@ public class RecursosMateriais {
         }
     }
 
-    // função que atualiza os recursos escolares
+    // função que atualiza os materiais escolares
     public static void attMatEsc(MaterialEscolar escolar) {
         Scanner input = new Scanner(System.in);
 
@@ -176,7 +180,7 @@ public class RecursosMateriais {
         }
     }
 
-    // função que atualiza os recursos de limpeza
+    // função que atualiza os materiais de limpeza
     public static void attMatLimp(MaterialLimpeza limpeza) {
         Scanner input = new Scanner(System.in);
 
@@ -215,6 +219,9 @@ public class RecursosMateriais {
         }
     }
 
+    //remove a quantidade de materiais disponíveis, setando para 0. Está dividida entre os 3 tipos de materiais existentes
+    //ao selecionar um tipo de material, será possível remover todos os materiais do tipo escolhido
+    //é realizada uma chamada de função para cada tipo de material
     public static void remover(MaterialDidatico didatico, MaterialEscolar escolar, MaterialLimpeza limpeza) {
         Scanner input = new Scanner(System.in);
 
@@ -238,6 +245,7 @@ public class RecursosMateriais {
         }
     }
 
+    // função que remove os materiais didáticos
     public static void removeMatDid(MaterialDidatico didatico) {
         Scanner input = new Scanner(System.in);
 
@@ -278,6 +286,7 @@ public class RecursosMateriais {
         }
     }
 
+    // função que remove os materiais ecolares
     public static void removeMatEsc(MaterialEscolar escolar) {
         Scanner input = new Scanner(System.in);
 
@@ -309,6 +318,7 @@ public class RecursosMateriais {
         }
     }
 
+    // função que remove os materiais de limpeza
     public static void removeMatLimp(MaterialLimpeza limpeza) {
         Scanner input = new Scanner(System.in);
 
@@ -343,6 +353,7 @@ public class RecursosMateriais {
         }
     }
 
+    //printa em tela a quantidade de todos os materiais disponíveis. 
     public static void gerarRelatorio(MaterialDidatico didatico, MaterialEscolar escolar, MaterialLimpeza limpeza) {
         Scanner input = new Scanner(System.in);
 
@@ -383,6 +394,9 @@ public class RecursosMateriais {
         }
     }
 
+    //busca a quantidade de um material esécífico. Está dividida entre os 3 tipos de materiais existentes
+    //ao selecionar um tipo de material, será possível remover todos os materiais do tipo escolhido
+    //é realizada uma chamada de função para cada tipo de material
     public static void buscarDados(MaterialDidatico didatico, MaterialEscolar escolar, MaterialLimpeza limpeza) {
         Scanner input = new Scanner(System.in);
 
@@ -398,8 +412,7 @@ public class RecursosMateriais {
         while (sair == 1) {
             if (k == 1) {
                 System.out.println("\nSelecione o atributo que deseja consultar: ");
-                System.out.println(
-                        "\n 1 - Livros\n 2 - Quadro negro\n 3 - Quadro branco\n 4 - Giz\n 5 - Apagador\n 6 - Pincel");
+                System.out.println("\n 1 - Livros\n 2 - Quadro negro\n 3 - Quadro branco\n 4 - Giz\n 5 - Apagador\n 6 - Pincel");
                 i = input.nextInt();
 
                 while (out == 1) {

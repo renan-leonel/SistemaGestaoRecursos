@@ -5,6 +5,7 @@ import trab1.material.*;
 import trab1.recursos.*;
 
 public class Operacoes {
+    // função que realiza a chamada para todas as funções de RecursosHumanos
     public static void operarPessoas(RecursosHumanos pessoas){
         Scanner input = new Scanner(System.in);
 
@@ -49,6 +50,7 @@ public class Operacoes {
         }
     }
 
+    // função que realiza a chamada para todas as funções de RecursosMateriais
     public static void operarMateriais(MaterialDidatico didatico, MaterialEscolar escolar, MaterialLimpeza limpeza, RecursosHumanos pessoas){
         Scanner input = new Scanner(System.in);
 
